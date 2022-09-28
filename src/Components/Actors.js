@@ -32,12 +32,13 @@ function Actor() {
         <div className="container">
           <div className="row">
             <div className="col-md-7">
+             <p style={{color:"white", fontSize:"16px"}}>Enter Actor Name</p>
               <input
                 type="text"
                 value={inputVal}
                 onChange={(e) => setInputVal(e.target.value)}
                 className="form-control"
-                placeholder="Search by Actors name...."
+                placeholder="Ex. Tom Cruise"
               />
             </div>
           </div>
@@ -45,40 +46,42 @@ function Actor() {
       </section>
 
       <section >
-        <div className="container mt-4">
-          <div className="row">
-            {actorsData.map((element) => {
-              return (
-                <div className="col-md-3 mb-3">
-                  <div className="card">
-                    <a href={element.person.url} >
-                    {element.person.image ? (
-                      <img
-                        src={element.person.image.medium}
-                        className="poster"
-                        style={{ width: "255px", height: "325px" }}
-                        alt={
-                          element.person.name != null
-                            ? element.person.name
-                            : "Not found"
-                        }
-                      />
-                    ) : (
+        <div className="bg-dark h-100">
+          <div className="container mt-4">
+            <div className="row">
+              {actorsData.map((element) => {
+                return (
+                  <div className="col-md-3 mb-3">
+                    <div className="card">
+                      <a href={element.person.url} >
+                      {element.person.image ? (
                         <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png"
-                          style={{ width: "250px", height: "325px" }}
-                          alt = "Not Found"
+                          src={element.person.image.medium}
+                          className="poster"
+                          style={{ width: "255px", height: "325px" }}
+                          alt={
+                            element.person.name != null
+                              ? element.person.name
+                              : "Not found"
+                          }
                         />
-                    )}
-                    </a>
-                    <h4 className="text-primary text-center pt-2">{element.person.name}</h4>
+                      ) : (
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png"
+                            style={{ width: "250px", height: "325px" }}
+                            alt = "Not Found"
+                          />
+                      )}
+                      </a>
+                      <h4 className="text-primary text-center pt-2">{element.person.name}</h4>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+                );
+              })}
+            </div>
+         </div>
+      </div>
+     </section>
     </>
   );
 }

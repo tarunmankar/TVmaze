@@ -31,19 +31,21 @@ function Actor() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-7">
+                        <p style={{color:"white", fontSize:"16px"}}>Enter Show Name</p>
                             <input
                                 type="text"
                                 value={inputVal}
                                 onChange={(e) => setInputVal(e.target.value)}
                                 className="form-control"
-                                placeholder="Search by Show name...."
+                                placeholder="Ex. Shark Tank"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+         <section>
+            <div className="bg-dark h-100">
                 <div className="container mt-4">
                     <div className="row">
                         {showData.map((element) => {
@@ -82,6 +84,7 @@ function Actor() {
                         })}
                     </div>
                 </div>
+              </div>
             </section>
         </>
     );
