@@ -8,7 +8,7 @@ function NavBar() {
           <div className="container-fluid">
             <div className="container">
               <h1 className="text-dark text-center">
-                TVmaze App
+                  TVmaze App
               </h1>
             </div>
           </div>

@@ -27,57 +27,55 @@ function Actor() {
 
     return (
         <>
-            <section className="mt-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-7">
-                        <p style={{color:"white", fontSize:"16px"}}>Enter Show Name</p>
-                            <input
-                                type="text"
-                                value={inputVal}
-                                onChange={(e) => setInputVal(e.target.value)}
-                                className="form-control"
-                                placeholder="Ex. Shark Tank"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <section className="mt-5">
+          <div className="container d-flex justify-content-center">
+              <div className="row">
+                  <p style={{color:"white", fontSize:"16px"}}>Enter Show Name</p>
+                              <input
+                                  type="text"
+                                  value={inputVal}
+                                  onChange={(e) => setInputVal(e.target.value)}
+                                  className="form-control"
+                                  placeholder="Ex. Shark Tank"
+                              />
+              </div>
+            </div>
+        </section>
 
          <section>
             <div className="bg-dark h-100">
                 <div className="container mt-4">
-                    <div className="row">
+                    <div className="row d-flex justify-content-center">
                         {showData.map((element) => {
                             return (
                               <div className="col-md-3 mb-3">
                                 <div className="card">
-                                  <a href={element.show.url} >
-                                  {element.show.image ? (
-                                    <img
-                                      src={element.show.image.medium}
-                                        style={{
-                                        width: "255px",
-                                        height: "325px",
-                                        }}
-                                      alt={
-                                        element.show.name != null
-                                          ? element.show.name
-                                          : "Not found"
-                                      }
-                                    />
-                                  ) : (
-                                      <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png"
-                                        style={{
-                                        width: "270px",
-                                        height: "325px",
-                                        }}
-                                        alt = {element.show.name}
-                                      />
-                                  )}
-                                  </a>
-                                  <h5 className="text-primary text-center pt-2">{element.show.name}</h5>
+                                    <div className="row">
+                                        <a href={element.show.url} >
+                                        {element.show.image ? (
+                                            <img
+                                            src={element.show.image.medium}
+                                                style={{
+                                                width: "100%"
+                                                }}
+                                            alt={
+                                                element.show.name != null
+                                                ? element.show.name
+                                                : "Not found"
+                                            }
+                                            />
+                                        ) : (
+                                            <img
+                                                src="https://st3.depositphotos.com/1322515/35964/v/600/depositphotos_359648638-stock-illustration-image-available-icon.jpg"
+                                                style={{
+                                                width: "100%"
+                                                }}
+                                                alt = {element.show.name}
+                                            />
+                                        )}
+                                        </a>
+                                        <h5 className="text-primary text-center pt-2">{element.show.name}</h5>
+                                  </div>
                                 </div>
                               </div>
                             );
@@ -85,8 +83,8 @@ function Actor() {
                     </div>
                 </div>
               </div>
-            </section>
-        </>
+           </section> 
+        </ >
     );
 }
 

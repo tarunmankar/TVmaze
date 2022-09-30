@@ -20,12 +20,12 @@ const Search = () => {
         <>
                 <div className="container">
                     <div className="row mt-3">
-                        <div className="col-md-7">
-                          <p style={{color:"white", fontSize:"20px"}}>Search your favorite actors and shows</p>
+                        <div className="col-md-12 text-center">
+                          <p style={{color:"white", fontSize:"20px"}}>Search About Your Favorite Actors and Shows</p>
                             <input type="radio" name="movie" onChange={() => setActorFilter()} /> 
-                                <label className="text-info h4">By Actor </label> &nbsp &nbsp
+                                <label className="text-info h4"> Actor </label> &nbsp &nbsp
                             <input type="radio" name="movie" onChange={() => setShowFilter()} /> 
-                                <label className="text-info h4"> By Shows</label>
+                                <label className="text-info h4"> Show </label>
                         </div>
                     </div>
                 </div>
