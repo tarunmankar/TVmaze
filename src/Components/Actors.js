@@ -37,7 +37,7 @@ function Actor() {
                         value={inputVal}
                         onChange={(e) => setInputVal(e.target.value)}
                         className="form-control"
-                        placeholder="Ex. Shark Tank"
+                        placeholder="Ex. Tom Cruise"
                     />
           </div>
         </div>
@@ -51,11 +51,10 @@ function Actor() {
                 return (
                   <div className="col-md-3 mb-3">
                     <div className="card">
-                      <a href={element.person.url} >
+                      <a href={element.person.url} className="border border-dark">
                       {element.person.image ? (
                         <img
                           src={element.person.image.medium}
-                          className="poster"
                           style={{ width: "100%"}}
                           alt={
                             element.person.name != null
@@ -71,7 +70,9 @@ function Actor() {
                           />
                       )}
                       </a>
-                      <h4 className="text-primary text-center pt-2">{element.person.name}</h4>
+                      <h4 className="text-primary text-center m-2">{element.person.name}</h4>
+                      <p className="text-center"><b> Gender :</b> {element.person.gender ? element.person.gender : "Not Avilable"}</p>
+                      <p className="text-center"><b> Date of birth :</b> {element.person.birthday ? element.person.birthday : "Not Avilable"}</p>
                     </div>
                   </div>
                 );

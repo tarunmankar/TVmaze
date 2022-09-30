@@ -51,7 +51,7 @@ function Actor() {
                               <div className="col-md-3 mb-3">
                                 <div className="card">
                                     <div className="row">
-                                        <a href={element.show.url} >
+                                        <a href={element.show.url} className="border border-dark" >
                                         {element.show.image ? (
                                             <img
                                             src={element.show.image.medium}
@@ -75,6 +75,8 @@ function Actor() {
                                         )}
                                         </a>
                                         <h5 className="text-primary text-center pt-2">{element.show.name}</h5>
+                                        <p className="text-center"><b>Runtime: </b>{element.show.runtime} min</p>
+                                        <p className="text-center"><b>Language: </b>{element.show.language}</p>
                                   </div>
                                 </div>
                               </div>
