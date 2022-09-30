@@ -74,7 +74,7 @@ function Actor() {
                                             />
                                         )}
                                         </a>
-                                        <h5 className="text-primary text-center pt-2">{element.show.name}</h5>
+                                        <h3 className="text-primary text-center pt-2">{element.show.name}</h3>
                                         <p className="text-center"><b>Runtime: </b>{element.show.runtime} min</p>
                                         <p className="text-center"><b>Language: </b>{element.show.language}</p>
                                   </div>

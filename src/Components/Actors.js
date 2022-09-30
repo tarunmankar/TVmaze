@@ -70,7 +70,7 @@ function Actor() {
                           />
                       )}
                       </a>
-                      <h4 className="text-primary text-center m-2">{element.person.name}</h4>
+                      <h3 className="text-primary text-center m-2">{element.person.name}</h3>
                       <p className="text-center"><b> Gender :</b> {element.person.gender ? element.person.gender : "Not Avilable"}</p>
                       <p className="text-center"><b> Date of birth :</b> {element.person.birthday ? element.person.birthday : "Not Avilable"}</p>
                     </div>
