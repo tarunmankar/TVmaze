@@ -21,7 +21,7 @@ const Search = () => {
                 <div className="container">
                     <div className="row mt-3">
                         <div className="col-md-12 text-center">
-                          <p style={{color:"white", fontSize:"20px"}}>Search About Your Favorite Actors and Shows</p>
+                          <p style={{color:"white", fontSize:"20px"}}>Search about your favorite actors and TV shows</p>
                             <input type="radio" name="movie" onChange={() => setActorFilter()} /> 
                                 <label className="text-info h4"> Actor </label> &nbsp &nbsp
                             <input type="radio" name="movie" onChange={() => setShowFilter()} /> 
